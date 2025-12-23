@@ -1,0 +1,18 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Koncar.Interview.Server.Starter/Koncar.Interview.Server.Starter.csproj" />
+  </Folder>
+  <Folder Name="/src/Application/">
+    <Project Path="src/Application/Koncar.Interview.Server.Application.Contracts/Koncar.Interview.Server.Application.Contracts.csproj" Id="0cb3ffab-b284-4b77-ba98-90f7653b22c0" />
+    <Project Path="src/Application/Koncar.Interview.Server.Application/Koncar.Interview.Server.Application.csproj" Id="1a826faf-4766-471d-914e-ee896beee750" />
+  </Folder>
+  <Folder Name="/src/Domain/">
+    <Project Path="src/Domain/Koncar.Interview.Server.Domain/Koncar.Interview.Server.Domain.csproj" Id="92b619f9-19e2-44ab-a657-5783fa5cc91b" />
+  </Folder>
+  <Folder Name="/src/Infrastructure/">
+    <Project Path="src/Infrastructure/Koncar.Interview.Server.Infrastructure.Db.Postgres/Koncar.Interview.Server.Infrastructure.Db.Postgres.csproj" Id="e5f699bb-ced1-4580-af20-de17d34f580e" />
+  </Folder>
+  <Folder Name="/src/Presentation/">
+    <Project Path="src/Presentation/Koncar.Interview.Server.Presentation.Api/Koncar.Interview.Server.Presentation.Api.csproj" Id="019f8b30-5bbb-4ee2-ab3c-9931c17d3bdc" />
+  </Folder>
+</Solution>

@@ -1,0 +1,6 @@
+@Koncar.Interview.Server.Starter_HostAddress = http://localhost:5193
+
+GET {{Koncar.Interview.Server.Starter_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
