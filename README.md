@@ -16,6 +16,10 @@ Nakon odabira nekog reda vidljivi su detalji o odabranom liku:
 ![client-detail-view](docs/klijentska-aplikacija-odabir-lika.png)
 Novi lik se kreira odabirom Create opcije u File izborniku, te se prikazuje sljedeči pogled:
 ![client-create-view](docs/klijentska-aplikacija-kreiranje-lika.png)
+Iz aplikacije se može izaći koristeći izbornik File i izborom Exit:
+![client-main-menu](docs/klijentska-aplikacija-izbornik.png)
+
+Postoje i kratice na tipkovnici za otvaranje izbornika (Alt+f), kreiranje lika (nakon otvaranja izbornika Alt+c) i izlaz (nakon otvaranja izbornika Alt+e).
 
 ## Napomene
 Logovi serverske aplikacije nalaze se u Logs mapi u mapi starter projekta [Starter](https://github.com/TiHedzet/koncar-interview/tree/master/server/src/Koncar.Interview.Server.Starter).

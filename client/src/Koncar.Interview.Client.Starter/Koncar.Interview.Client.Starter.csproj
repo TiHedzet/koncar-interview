@@ -29,8 +29,4 @@
     <ProjectReference Include="..\Presentation\Koncar.Interview.Client.Presentation.Tui\Koncar.Interview.Client.Presentation.Tui.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Logs\" />
-  </ItemGroup>
-
 </Project>
