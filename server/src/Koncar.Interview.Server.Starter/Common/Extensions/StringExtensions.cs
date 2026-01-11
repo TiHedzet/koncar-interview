@@ -1,5 +1,7 @@
 ﻿namespace Koncar.Interview.Server.Starter.Common.Extensions;
 
+using System;
+
 internal static class StringExtensions
 {
     public static string EscapeNewLine(

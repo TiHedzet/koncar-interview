@@ -1,0 +1,23 @@
+services:
+    postgres:
+        image: 'postgres:latest'
+        container_name: "pg-db"
+        environment:
+            POSTGRES_USER: "root"
+            POSTGRES_PASSWORD: "root"
+            POSTGRES_DB: "koncar"
+        ports:
+            - "5432:5432"
+        volumes:
+            - ./pg-data:/var/lib/postgresql
+
+    migrator:
+        build: 
+            dockerfile: Dockerfile-migrator
+        environment:
+            ConnectionStrings__DefaultConnection: Server=postgres;Port=5432;User ID=root;Database=koncar;Password=root;
+        depends_on:
+            - postgres
+
+
+

@@ -1,3 +1,18 @@
 <Solution>
-  <Project Path="Koncar.Interview.Client.Starter/Koncar.Interview.Client.Starter.csproj" />
+  <Folder Name="/src/">
+    <Project Path="src/Koncar.Interview.Client.Starter/Koncar.Interview.Client.Starter.csproj" />
+  </Folder>
+  <Folder Name="/src/Application/">
+    <Project Path="src/Application/Koncar.Interview.Client.Application.Contracts/Koncar.Interview.Client.Application.Contracts.csproj" Id="b064817e-8d49-46d6-a3de-b998157451fa" />
+    <Project Path="src/Application/Koncar.Interview.Client.Application/Koncar.Interview.Client.Application.csproj" Id="e3839f1c-f11b-4c13-acc0-7b11e4b23efe" />
+  </Folder>
+  <Folder Name="/src/Domain/">
+    <Project Path="src/Domain/Koncar.Interview.Client.Domain/Koncar.Interview.Client.Domain.csproj" Id="19c4e90b-1742-473a-a1b8-8a4155707d3e" />
+  </Folder>
+  <Folder Name="/src/Infrastructure/">
+    <Project Path="src/Infrastructure/Koncar.Interview.Client.Infrastructure.Http/Koncar.Interview.Client.Infrastructure.Http.csproj" Id="443d0b60-d056-4bc3-9399-344ded17c238" />
+  </Folder>
+  <Folder Name="/src/Presentation/">
+    <Project Path="src/Presentation/Koncar.Interview.Client.Presentation.Tui/Koncar.Interview.Client.Presentation.Tui.csproj" Id="9e33175b-9e6d-462a-92fd-3c2a81b1ebc2" />
+  </Folder>
 </Solution>

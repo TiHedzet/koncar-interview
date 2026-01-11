@@ -1,0 +1,23 @@
+FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS base
+USER $APP_UID
+
+FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
+WORKDIR /src
+COPY server ./server
+COPY migrator ./migrator
+
+RUN dotnet restore migrator/src/Koncar.Interview.DatabaseMigrator/Koncar.Interview.DatabaseMigrator.csproj
+RUN dotnet build migrator/src/Koncar.Interview.DatabaseMigrator/Koncar.Interview.DatabaseMigrator.csproj -c Release -o /app/build
+
+FROM build AS publish
+ARG BUILD_CONFIGURATION=Release
+RUN dotnet publish "migrator/src/Koncar.Interview.DatabaseMigrator/Koncar.Interview.DatabaseMigrator.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+USER root
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends libgssapi-krb5-2 \
+    && rm -rf /var/lib/apt/lists/*
+ENTRYPOINT ["dotnet", "Koncar.Interview.DatabaseMigrator.dll"]

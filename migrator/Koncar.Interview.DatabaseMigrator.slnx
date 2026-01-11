@@ -1,0 +1,6 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Koncar.Interview.DatabaseMigrator/Koncar.Interview.DatabaseMigrator.csproj" />
+  </Folder>
+  <Project Path="../server/src/Infrastructure/Koncar.Interview.Server.Infrastructure.Db.Postgres/Koncar.Interview.Server.Infrastructure.Db.Postgres.csproj" />
+</Solution>

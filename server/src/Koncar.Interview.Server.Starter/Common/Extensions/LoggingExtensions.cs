@@ -1,8 +1,10 @@
 ﻿namespace Koncar.Interview.Server.Starter.Common.Extensions;
 
 using Koncar.Interview.Server.Starter.Common.Logging;
+using Microsoft.Extensions.Configuration;
 using Serilog;
 using Serilog.Configuration;
+using System;
 
 internal static class LoggingExtensions
 {
@@ -21,11 +23,11 @@ internal static class LoggingExtensions
     {
         ArgumentNullException.ThrowIfNull(loggerConfiguration);
 
-
         return loggerConfiguration
             .ReadFrom.Configuration(configuration)
             .Enrich.FromLogContext()
             .Enrich.WithMachineName()
+            .Enrich.WithThreadId()
             .Enrich.WithEscapedExceptionMessage()
             .WriteTo.Async(static configuration =>
             {

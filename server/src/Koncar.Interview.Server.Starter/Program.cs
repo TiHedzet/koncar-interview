@@ -1,8 +1,13 @@
+namespace Koncar.Interview.Server.Starter;
+
 using Koncar.Interview.Server.Starter.Common.Cosntants;
 using Koncar.Interview.Server.Starter.Common.Extensions;
+using Microsoft.AspNetCore.Builder;
 using Serilog;
+using System;
+using System.Threading.Tasks;
 
-public partial class Program
+public class Program
 {
     private static async Task<int> Main(string[] args)
     {
@@ -10,14 +15,19 @@ public partial class Program
         {
             WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
-        Log.Logger = new LoggerConfiguration()
-            .ConfigureLogger(builder.Configuration)
-            .CreateBootstrapLogger();
+            Log.Logger = new LoggerConfiguration()
+                .ConfigureLogger(builder.Configuration)
+                .CreateBootstrapLogger();
 
-        
             Log.Information("Starting web host.");
 
-            builder.
+            Startup.ConfigureServices(builder);
+
+            await using WebApplication app = builder.Build();
+
+            Startup.Configure(app);
+
+            await app.RunAsync();
 
             return ExitCodes.Success;
 
@@ -31,24 +41,5 @@ public partial class Program
         {
             await Log.CloseAndFlushAsync();
         }
-        builder.Services.AddControllers();
-        // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-        builder.Services.AddOpenApi();
-
-        var app = builder.Build();
-
-        // Configure the HTTP request pipeline.
-        if (app.Environment.IsDevelopment())
-        {
-            app.MapOpenApi();
-        }
-
-        app.UseHttpsRedirection();
-
-        app.UseAuthorization();
-
-        app.MapControllers();
-
-        app.Run();
     }
 }

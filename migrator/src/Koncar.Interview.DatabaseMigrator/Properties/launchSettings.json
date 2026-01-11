@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Koncar.Interview.DatabaseMigrator": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
