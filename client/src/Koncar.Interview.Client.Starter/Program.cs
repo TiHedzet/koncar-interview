@@ -5,6 +5,7 @@ using Koncar.Interview.Client.Presentation.Tui.Contracts.Windows;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
+using System;
 using Terminal.Gui.App;
 using Terminal.Gui.Views;
 
@@ -21,7 +22,9 @@ internal static class Program
         Log.Logger = new LoggerConfiguration()
             .MinimumLevel.Information()
             .Enrich.FromLogContext()
-            .WriteTo.File("log.txt", rollingInterval: RollingInterval.Day)
+            .WriteTo.File(
+                "Logs/log.txt", 
+                rollingInterval: RollingInterval.Day)
             .CreateLogger();
 
         try

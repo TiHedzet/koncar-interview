@@ -1,5 +1,7 @@
 ﻿namespace Koncar.Interview.Client.Presentation.Tui.Internal;
 
+using System.Threading;
+
 internal static class CancellationTokenProvider
 {
     public static CancellationTokenSource Create(CancellationToken? parentToken = null)

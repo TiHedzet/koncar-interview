@@ -2,6 +2,9 @@
 
 using Koncar.Interview.Client.Application.Contracts.Models;
 using Koncar.Interview.Client.Domain.Entities;
+using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 
 public interface ICharacterServiceAdapter
 {

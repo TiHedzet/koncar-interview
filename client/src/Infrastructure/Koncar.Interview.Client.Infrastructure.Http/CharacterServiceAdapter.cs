@@ -7,7 +7,7 @@ using Koncar.Interview.Client.Infrastructure.Http.Internal.Common;
 using Koncar.Interview.Client.Infrastructure.Http.Internal.Models;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
+using System.Net.Http;
 using System.Net.Mime;
 using System.Text;
 using System.Text.Json;

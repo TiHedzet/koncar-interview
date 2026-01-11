@@ -10,6 +10,8 @@ using Koncar.Interview.Client.Presentation.Tui.Contracts.Windows;
 using MediatR;
 using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 
 internal sealed class CharacterPresenter : PresenterBase, ICharacterPresenter
 {

@@ -1,6 +1,7 @@
 ﻿namespace Koncar.Interview.Client.Application.Internal;
 
 using Microsoft.Extensions.Logging;
+using System;
 
 internal static partial class Log
 {

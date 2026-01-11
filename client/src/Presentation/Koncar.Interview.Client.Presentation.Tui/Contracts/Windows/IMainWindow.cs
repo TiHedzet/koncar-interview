@@ -2,6 +2,7 @@
 
 using Koncar.Interview.Client.Presentation.Tui.Contracts.Views;
 using Koncar.Interview.Client.Presentation.Tui.Contracts.Views.Characters;
+using System;
 
 public interface IMainWindow
 {

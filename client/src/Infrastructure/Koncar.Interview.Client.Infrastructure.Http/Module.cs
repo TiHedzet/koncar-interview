@@ -4,6 +4,7 @@ using Koncar.Interview.Client.Application.Contracts.Adapters;
 using Koncar.Interview.Client.Infrastructure.Http.Internal.Settings;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System;
 
 public static class Module
 {

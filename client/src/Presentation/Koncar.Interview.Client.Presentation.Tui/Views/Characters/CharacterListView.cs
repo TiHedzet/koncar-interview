@@ -2,8 +2,10 @@
 
 using Koncar.Interview.Client.Domain.Entities;
 using Koncar.Interview.Client.Presentation.Tui.Contracts.Views.Characters;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using Terminal.Gui.ViewBase;
 using Terminal.Gui.Views;
 
@@ -86,6 +88,8 @@ internal sealed class CharacterListView : FrameView, ICharacterListView
 
     public void SetSource(IEnumerable<Character> entities)
     {
-        _characters.SetSource(new ObservableCollection<string>(entities.Select(c => $"{c.Id} - {c.Name}")));
+        _characters.SetSource(new ObservableCollection<string>(entities
+            .OrderBy(c => c.Id)
+            .Select(c => $"{c.Id} - {c.Name}")));
     }
 }

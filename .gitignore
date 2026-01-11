@@ -485,6 +485,8 @@ $RECYCLE.BIN/
 
 # Logs
 Logs
+!Logs/.gitkeep
 
 # Postgres data
 pg-data/*
+!pg-data/.gitkeep

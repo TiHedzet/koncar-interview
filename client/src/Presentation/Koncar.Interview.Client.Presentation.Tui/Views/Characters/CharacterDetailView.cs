@@ -2,6 +2,7 @@
 
 using Koncar.Interview.Client.Domain.Entities;
 using Koncar.Interview.Client.Presentation.Tui.Contracts.Views.Characters;
+using System;
 using Terminal.Gui.ViewBase;
 using Terminal.Gui.Views;
 

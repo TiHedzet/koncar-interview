@@ -5,6 +5,7 @@ using Koncar.Interview.Client.Presentation.Tui.Contracts.Views.Characters;
 using Koncar.Interview.Client.Presentation.Tui.Contracts.Windows;
 using Koncar.Interview.Client.Presentation.Tui.Views;
 using Koncar.Interview.Client.Presentation.Tui.Views.Characters;
+using System;
 using Terminal.Gui.Input;
 using Terminal.Gui.ViewBase;
 using Terminal.Gui.Views;
